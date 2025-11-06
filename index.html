@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIRIUS - Bar à Couture • Nice</title>
+
+    <!-- Elegant Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bleu-couture: #0A1A33;
+            --beige-dore: #C5A574;
+            --fond-creme: #FDFBF7;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--fond-creme);
+            color: var(--bleu-couture);
+        }
+
+        /* HERO with IMAGE */
+        .hero {
+            height: 90vh;
+            background: url('hero.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(10, 26, 51, 0.45);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+
+        h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 3.8rem;
+            margin: 0;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            max-width: 700px;
+            opacity: 0.95;
+            margin-top: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--beige-dore);
+            color: white;
+            padding: 14px 32px;
+            margin-top: 25px;
+            font-size: 1.1rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 2.6rem;
+            border-left: 6px solid var(--beige-dore);
+            padding-left: 12px;
+            margin-bottom: 35px;
+        }
+
+        /* Services Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 16px rgba(0,0,0,0.08);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-family: "Playfair Display";
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* TARIFS */
+        .tarif-row {
+            display: grid;
+            grid-template-columns: 1fr 120px;
+            padding: 12px 0;
+            border-bottom: 1px solid #e6dccd;
+            font-size: 1.15rem;
+        }
+
+        .tarif-price {
+            text-align: right;
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--bleu-couture);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: 60px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO IMAGE -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>SIRIUS – Bar à Couture</h1>
+            <p class="subtitle">Création, retouches et ateliers dans un espace chaleureux au cœur de Nice.</p>
+            <a href="#services" class="btn">Découvrir nos services</a>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <h2>Nos Services</h2>
+
+        <div class="cards">
+            <div class="card">
+                <img src="https://recreanice.fr/sites/default/files/imce/faceapp_1647617099575_-_copie.jpg" alt="Retouches">
+                <div class="card-body">
+                    <h3 class="card-title">Bar à couture </h3>
+                    <p>Accès libre aux machines professionnelles et matériel</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://www.citizenkid.com/uploads/medias/7d/d1/7dd1ef51e7176c731195e4c3a530fad1104e39f9.jpeg" alt="Cours de couture">
+                <div class="card-body">
+                    <h3 class="card-title">Cours de couture</h3>
+                    <p>Ateliers adaptés à tous niveaux dans un cadre inspirant.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="data:image/jpeg;base64,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" alt="Atelier libre">
+                <div class="card-body">
+                    <h3 class="card-title">Retouche </h3>
+                    <p>Travail précis, finitions raffinées et délais rapides.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TARIFS -->
+    <section id="tarifs">
+        <h2>Tarifs</h2>
+
+        <div class="tarif-row">
+            Initiation à la couture  2H <span>25 €</span>
+        </div>
+
+        <div class="tarif-row">
+            Retouche  <span>à partir de 8€ € </span>
+        </div>
+
+        <div class="tarif-row">
+            Privatitation de l'espace 2H <span>à partir 200 €</span>
+        </div>
+
+        <br>
+        <a href="TARIFS.pdf" class="btn" target="_blank">PDF complet</a>
+            </index>
+    </section>
+
+
+<!-- GALLERY -->
+<section>
+    <h2>Galerie</h2>
+
+        <img src="https://recreanice.fr/sites/default/files/2022/imce/stage5.jpg">
+        <img src="https://recreanice.fr/sites/default/files/2022/imce/anniv.jpg">
+        <img src="https://recreanice.fr/sites/default/files/2022/imce/anniv1.jpg">
+        <img src="https://recreanice.fr/sites/default/files/imce/20220228_115308.jpg">
+    </div>
+</section>
+
+</body>
+</html><div class="gallery">
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>📍 15 rue Georges ville. 06300 Nice, France</p>
+        <p>📞 +33 6 25603387</p>
+        <p>📧 sirius-mon-bar-a-couture@hotmail.com</p>
+    </section>
+
+<!-- FOOTER -->
+
+    <footer>©️ 2025 SIRIUS Bar à Couture • Nice  France • ©️ 2025 Tous droits réservés</footer>
+
+</body>
+</html>
